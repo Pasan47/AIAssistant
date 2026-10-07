@@ -62,10 +62,10 @@ async def response_agent(state: dict) -> dict:
         async for token in llm_stream(messages):
             draft += token
             await emit("token", text=token)
-    except LLMUnavailable as exc:
+    except LLMUnavailable :
         await emit("degraded", node="response", message="LLM unavailable - returning extractive answer")
         errors.append("response LLM unavailable")
         draft = extractive_fallback(chunks, "LLM unavailable")
         await emit("token", text=draft)
-        _ = exc
+        
     return {"draft": draft, "errors": errors}
