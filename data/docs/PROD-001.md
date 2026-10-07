@@ -1,6 +1,6 @@
 ---
 doc_id: PROD-001
-title: Product specification: Instant Transfer
+title: "Product specification: Instant Transfer"
 department: retail
 document_type: product_spec
 access_level: internal

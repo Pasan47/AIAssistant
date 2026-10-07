@@ -1,6 +1,6 @@
 ---
 doc_id: ARCH-002
-title: Architecture: Fraud detection engine
+title: "Architecture: Fraud detection engine"
 department: risk
 document_type: architecture
 access_level: confidential

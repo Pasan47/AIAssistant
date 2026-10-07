@@ -1,6 +1,6 @@
 ---
 doc_id: ARCH-001
-title: Architecture: Payments platform overview
+title: "Architecture: Payments platform overview"
 department: payments
 document_type: architecture
 access_level: internal

@@ -1,6 +1,6 @@
 ---
 doc_id: RB-PAY-001
-title: Runbook: Payment gateway failover and degraded mode
+title: "Runbook: Payment gateway failover and degraded mode"
 department: payments
 document_type: runbook
 access_level: internal

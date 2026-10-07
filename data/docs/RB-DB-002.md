@@ -1,6 +1,6 @@
 ---
 doc_id: RB-DB-002
-title: Runbook: Database connection pool saturation
+title: "Runbook: Database connection pool saturation"
 department: platform
 document_type: runbook
 access_level: internal

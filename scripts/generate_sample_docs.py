@@ -1,4 +1,5 @@
 """Generate mock enterprise documents (markdown + YAML front-matter) into data/docs/."""
+import json
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "data" / "docs"
@@ -6,8 +7,8 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 
 def write(doc_id: str, title: str, dept: str, dtype: str, level: str, date: str, body: str, **extra):
-    extras = "".join(f"{k}: {v}\n" for k, v in extra.items())
-    fm = (f"---\ndoc_id: {doc_id}\ntitle: {title}\ndepartment: {dept}\ndocument_type: {dtype}\n"
+    extras = "".join(f"{k}: {json.dumps(v)}\n" for k, v in extra.items())
+    fm = (f"---\ndoc_id: {doc_id}\ntitle: {json.dumps(title)}\ndepartment: {dept}\ndocument_type: {dtype}\n"
           f"access_level: {level}\ncreated_date: '{date}'\n{extras}---\n\n")
     (OUT / f"{doc_id}.md").write_text(fm + body.strip() + "\n")
 
